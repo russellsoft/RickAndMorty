@@ -1,21 +1,20 @@
-import { Route, Routes } from "react-router-dom";
-import GlobalStyles from "./global-styles";
-import AboutMe from "./routes/about-me/about-component";
-import Home from "./routes/home/home.component";
-import Navigation from "./routes/navigation/navigation.component";
+import React from "react";
+import NavbarComponent from "./components/NavbarComponent";
+import { PagesRouter } from "./router/PagesRouter";
+import { ConfigProvider } from "antd";
 
 const App = () => {
-	return (
-		<>
-			<Routes>
-				<Route path="/" element={<Navigation />}>
-					<Route index element={<Home />} />
-					<Route path="about" element={<AboutMe />} />
-				</Route>
-			</Routes>
-			<GlobalStyles />
-		</>
-	)
-}
+  return (
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: "rgb(255, 152, 0)",
+        },
+      }}
+    >
+      <PagesRouter />
+    </ConfigProvider>
+  );
+};
 
 export default App;
