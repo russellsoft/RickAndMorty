@@ -20,7 +20,9 @@ export const CardContainer = styled.div`
     flex-direction: row;
 
     img {
-      height: 225px;
+      height: 100%;
+			width: 190px;
+			object-fit: cover;
       border-radius: 10px 0 0 10px;
     }
 

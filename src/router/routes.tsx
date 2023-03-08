@@ -1,6 +1,8 @@
+import React from 'react';
 import { RoutePathsType } from "./types";
 import { routerPath } from "./routerPath";
 import HomePage from "../pages/HomePage";
+import { AboutMe } from "../pages/AboutMePage/AboutMe";
 
 export const routes: RoutePathsType = [
   {
@@ -11,6 +13,6 @@ export const routes: RoutePathsType = [
   {
     path: routerPath.about,
     name: "Обо мне",
-    Component: <h1>Обо мне</h1>,
+    Component: <AboutMe />,
   },
 ];

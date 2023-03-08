@@ -1,5 +1,4 @@
 import React from "react";
-import NavbarComponent from "./components/NavbarComponent";
 import { PagesRouter } from "./router/PagesRouter";
 import { ConfigProvider } from "antd";
 
